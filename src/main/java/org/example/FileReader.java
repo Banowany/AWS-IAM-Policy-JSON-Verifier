@@ -1,10 +1,12 @@
 package org.example;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 public class FileReader {
-    //TODO: Implement
     public String read(String filePath) throws IOException {
-        return "";
+        Path path = Path.of(filePath);
+        return Files.readString(path);
     }
 }
